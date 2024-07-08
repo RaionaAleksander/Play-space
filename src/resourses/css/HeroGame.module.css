@@ -1,0 +1,109 @@
+.heroContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heroBorder {
+    width: 680px;
+    height: auto;
+    background-color: azure;
+    border: 3px solid black;
+    margin-top: 20px;
+}
+
+.heroCanvas {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.heroName {
+    color: goldenrod;
+}
+
+.heroImage {
+    margin: 15px;
+    width: auto;
+    height: 460px;
+}
+
+.interfaceField {
+    width: 300px;
+}
+
+.header {
+    margin-top: 40px;
+}
+
+.buttonsField {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.upgradeField {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.smallButton {
+    width: 120px;
+}
+
+.buttonsContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.heroButton {
+    border: 2px solid black;
+    font-size: 18px;
+    padding-top: 6px; 
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 4px;
+    text-decoration: none;
+}
+
+.pauseStart:hover, .restart:hover {
+    border: 2px solid darkgray;
+}
+
+.restart {
+    background-color: darkgray;
+}
+
+
+
+/*
+
+.container {
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px; 
+    margin: 30px;
+}
+  
+.image {
+    margin-right: 10px;
+    width: auto;
+    height: 580px;
+}
+
+.smallImages {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+  
+.smallImage {
+    width: 20%;
+    height: auto;
+}*/

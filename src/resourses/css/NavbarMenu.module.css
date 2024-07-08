@@ -1,0 +1,103 @@
+.navBarMenu {
+    z-index: 1000;
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: gray;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.menuContainer {
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.imageIcon {
+    width: 100px;
+    margin-top: 4px;
+    margin-left: 6px;
+    margin-right: 8px;
+}
+
+.buttonsContainer {
+    display: flex;
+}
+
+.buttonItem {
+    margin-left: 16px;
+    margin-right: 4px;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: black;
+    color: white;
+    border: 2px solid darkred;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.dropdownItem {
+    margin-left: 16px;
+    margin-right: 4px;
+}
+
+.dropdownButton, .dropdownButtonNotUse {
+    display: block;
+    padding: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: black;
+    color: white;
+    border: 2px solid darkred;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.dropdownContent {
+    position: absolute;
+    display: none;
+    background-color: lightgrey;
+    flex-direction: column;
+}
+
+.dropdownContentButton {
+    position: static;
+    background-color: black;
+    border: 3px solid darkred;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.dropdownContentButton:hover {
+    color: gold;
+    border: 3px solid darkblue;
+}
+
+.dropdownItem:hover {
+    .dropdownContent {
+        display: flex;
+    }
+}
+
+.buttonItem:hover, .dropdownButton:hover {
+    border: 2px solid darkblue;
+    color: gold;
+    font-size: 17px;
+    padding: 9px 11px 10px 11px;
+}
+
+.buttonItem:hover {
+    padding-bottom: 8px;
+}
+
+.dropdownButton:hover {
+    padding-bottom: 9px;
+}

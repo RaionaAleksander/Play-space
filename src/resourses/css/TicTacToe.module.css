@@ -1,0 +1,69 @@
+.tictactoeContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.TicTacToeMenu {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: baseline;
+    width: 680px;
+}
+
+.boardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.boardRow {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    gap: 0;
+}
+
+.boardRowLR {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+.boardRowUp {
+    border-top: 3px solid black;
+}
+
+.boardRowDown {
+    border-bottom: 3px solid black;
+}
+
+.squareButton {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+    cursor: pointer;
+}
+
+.listObject {
+    margin-top: 42px;
+}
+
+.listItem {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: -24px;
+}
+
+.listButton {
+    margin-left: 4px;
+    background-color: lightgray;
+}

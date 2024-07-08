@@ -1,0 +1,33 @@
+.aboutUsPosition {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*flex-direction: column;*/
+}
+
+.informationFiled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    width: 60%;
+}
+
+.reactImage {
+    width: 180px; 
+}
+
+.heartImage {
+    width: 300px;
+}
+
+.divText {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 86%;
+    font-size: 18px;
+    line-height: 1.5;
+}

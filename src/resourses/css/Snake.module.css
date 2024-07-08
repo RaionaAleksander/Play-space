@@ -1,0 +1,84 @@
+.snakeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'VT323', monospace;
+    margin: 0;
+}
+
+.snakeBorder {
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: darkgray;
+    margin-top: 20px;
+    width: 420px;
+    height: 420px;
+}
+
+.snakeCanvas {
+    border: 1px solid gray;
+    margin: 9px;
+}
+
+.buttonsContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.snakeButton {
+    border: 2px solid black;
+    font-size: 18px;
+    padding-top: 6px; 
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 4px;
+    text-decoration: none;
+}
+
+.pauseStart:hover, .restart:hover, .settings:hover {
+    border: 2px solid darkgray;
+}
+
+.restart {
+    background-color: darkgray;
+}
+
+.settings {
+    background-color: lightblue;
+}
+
+.overlayPanel {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(223, 223, 223, 0.8);
+    border: 3px solid lightblue;
+    border-radius: 5px;
+    padding: 8px;
+    padding-top: 0;
+    z-index: 1000;
+    
+}
+
+.overlayContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlayLabel {
+    margin-top: 24px;
+}
+
+.applyButton {
+    margin-top: 40px;
+    border: 2px solid black;
+    padding: 8px;
+    text-decoration: none;
+}

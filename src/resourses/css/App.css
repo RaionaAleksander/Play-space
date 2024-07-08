@@ -1,0 +1,66 @@
+h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 0px;
+}
+
+th, td, table {
+    border: 2px solid black;
+}
+
+th {
+    background-color: gray;
+}
+
+th, td {
+    padding: 2px;
+}
+
+h2, h3, h4, h5, h6, p {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.startPage {
+    padding-top: 80px;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.pixel-font {
+    font-family: "Press Start 2P", cursive;
+}
+
+.gameText {
+    background: -webkit-linear-gradient(darkred, darkblue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.winText {
+  font-size: 50px;
+  background: -webkit-linear-gradient(gold, brown);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.snakeGame {
+    background: -webkit-repeating-radial-gradient(lightgreen, darkgreen, lightgreen);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.otherText {
+    background: -webkit-linear-gradient(#eee, #333);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
