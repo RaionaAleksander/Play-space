@@ -11,20 +11,25 @@ import warrior from '../resourses/images/Warrior.png';
 import warrior_active from '../resourses/images/Warrior_leveled.png';
 import ticTacToe from '../resourses/images/TicTacToe.png';
 import tacTavToe_active from '../resourses/images/TicTacToe_active.png';
+import snake from '../resourses/images/Snake.png';
+import snake_active from '../resourses/images/Snake_active.png';
 
 
 const Games = () => {
     const [isHovered1, setIsHovered1] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
     const [isHovered3, setIsHovered3] = useState(false);
+    const [isHovered4, setIsHovered4] = useState(false);
 
     function handleMouse(i) {
         if (i === 1) {
             setIsHovered1(!isHovered1);
         } else if (i === 2) {
             setIsHovered2(!isHovered2);
-        } else {
+        } else if (i === 3) {
             setIsHovered3(!isHovered3);
+        } else {
+            setIsHovered4(!isHovered4)
         }
     }
 
@@ -79,11 +84,27 @@ const Games = () => {
                 <div className={styles.textContainer}>
                     <h2>Tic Tac Toe</h2>
                     <p className={styles.textItem}>
-                    Tic Tac Toe is a two-player game in which the objective is to take turns and mark the correct spaces in a 3x3 (or larger) grid.
+                    <b>Tic Tac Toe</b> is a two-player game in which the objective is to take turns and mark the correct spaces in a 3x3 (or larger) grid.
                     Think on your feet but also be careful, as the first player who places three of their marks in a horizontal, vertical or diagonal row wins the game!
                     How many rounds in a row can you win?
                     </p>
                     <Link className={styles.buttonItem} to="/games/tic-tac-toe">Play the game</Link>
+                </div>
+            </div>
+
+            <div className={styles.gameContainer} style={{backgroundColor: "lightgreen"}} 
+                onMouseEnter={() => handleMouse(4)} onMouseLeave={() => handleMouse(4)}
+            >
+                <div className={styles.imageContainer}>
+                    <img alt="The fourth game" src={isHovered4 ? snake_active : snake} className={styles.imageItem}></img>
+                </div>
+                <div className={styles.textContainer}>
+                    <h2>Snake</h2>
+                    <p className={styles.textItem}>
+                    <b>Snake</b> is a genre of action video games where the player maneuvers the end of a growing line, often themed as a snake.
+                    The player must keep the snake from colliding with both other obstacles and itself, which gets harder as the snake lengthens.
+                    </p>
+                    <Link className={styles.buttonItem} to="/games/snake">Play the game</Link>
                 </div>
             </div>
         </div>

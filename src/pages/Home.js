@@ -76,8 +76,14 @@ const Home = () => {
                         </Link>
                     </div>
                 </div>
+                <div className={styles.divText}>
+                    <hr />
+                    <p>
+                        You can learn more about us <Link to="/about_us">here</Link>.
+                    </p>
+                    <br />
+                </div>
             </div>
-            <br /><br /><br />
         </div>
     );
 }
