@@ -32,7 +32,7 @@
     line-height: 1.5;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 401px) {
     .informationFiled {
         width: 100%;
         border-radius: 0px;
@@ -47,7 +47,7 @@
     }
 }
 
-@media (min-width: 401px) and (max-width: 600px) {
+@media (min-width: 402px) and (max-width: 600px) {
     .informationFiled {
         width: 90%;
     }
