@@ -14,12 +14,14 @@ import Snake from './pages/Games/Snake';
 import AboutUs from './pages/Other/AboutUs';
 
 import Navbarmenu from './pages/Navbarmenu';
+import ScrollToTop from './ScrollToTop';
 
 import './resourses/css/App.css';
 
 export default function App() {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<Navbarmenu />}>
                 <Route index element={<Home />} />
