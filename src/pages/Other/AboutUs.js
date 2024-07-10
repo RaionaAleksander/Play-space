@@ -20,6 +20,12 @@ const AboutUs = () => {
         }
     })
 
+    const currentDate = new Date();
+
+    const day = currentDate.getDate();
+    const month = currentDate.toLocaleString("en-US", {month: "long"});
+    const year = currentDate.getFullYear();
+
     return (
         <div class="startPage">
             <h1>About Us</h1>
@@ -31,8 +37,10 @@ const AboutUs = () => {
                             My name is <b>Aleksander Ontin</b>, and I am passionate about web development. 
                             The project, which is called <b>Play space</b>, was created and developed by me.
                         </p>
-                        <p>The project repository can be found here.</p>
-                        <p>This project was created using the React framework as part of my journey to learn and master it.</p>
+                        <p>This project was created using the <b>React</b> framework as part of my journey to learn and master it.</p>
+                        <p>The creation of the project started along with learning React on June 24, 2024 and its refinement probably continues until the current time, {month} {day}, {year}.</p>
+                        <p>The project repository can be found <a rel="noreferrer" target="_blank" href="https://github.com/RaionaAleksander/Play-space">here</a> on the <b>GitHub</b> platform.</p>
+
                     </div>
                     <img className={styles.reactImage} src={React_icon} alt="react ison" />
                     <div className={styles.divText}>
