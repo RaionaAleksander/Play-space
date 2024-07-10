@@ -9,7 +9,7 @@
 
 .divText {
     margin-top: 30px;
-    width: 40%;
+    width: 50%;
     font-size: 18px;
     line-height: 1.5;
 }
@@ -67,4 +67,53 @@
     0% { left: 100%; }
     50% { left: -100%; }
     100% {left: -100%; }
+}
+
+
+@media (max-width: 400px) {
+    .divText {
+        width: 90%;
+    }
+
+    .marquee {
+        height: 100px;
+        margin-top: 10px;
+    }
+
+    .marqueeimage {
+        height: 100px;
+        width: auto;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+    .divText {
+        width: 80%;
+    }
+
+    .marquee {
+        height: 120px;
+        margin-top: 10px;
+    }
+
+    .marqueeimage {
+        height: 120px;
+        width: auto;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px) {
+    .divText {
+        width: 60%;
+    }
+
+    .marquee {
+        height: 180px;
+        margin-top: 20px;
+    }
+
+    .marqueeimage {
+        height: 180px;
+        width: auto;
+    }
 }

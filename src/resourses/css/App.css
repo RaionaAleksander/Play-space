@@ -64,3 +64,51 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    p {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1600px) {
+    h1 {
+        font-size: 46px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 2000px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 2600px) {
+    h1 {
+        font-size: 54px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+}

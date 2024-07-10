@@ -13,7 +13,7 @@
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 15px;
-    width: 50%;
+    width: 60%;
 }
 
 .reactImage {
@@ -30,4 +30,72 @@
     width: 86%;
     font-size: 18px;
     line-height: 1.5;
+}
+
+@media (max-width: 400px) {
+    .informationFiled {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .reactImage {
+        width: 100px; 
+    }
+    
+    .heartImage {
+        width: 140px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+    .informationFiled {
+        width: 90%;
+    }
+
+    .reactImage {
+        width: 120px; 
+    }
+    
+    .heartImage {
+        width: 180px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    .informationFiled {
+        width: 80%;
+    }
+
+    .reactImage {
+        width: 140px; 
+    }
+    
+    .heartImage {
+        width: 220px;
+    }
+}
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    .informationFiled {
+        width: 70%;
+    }
+
+    .reactImage {
+        width: 160px; 
+    }
+    
+    .heartImage {
+        width: 260px;
+    }
+}
+
+
+@media (min-width: 2000px) {
+    .reactImage {
+        width: 240px; 
+    }
+    
+    .heartImage {
+        width: 400px;
+    }
 }
