@@ -20,7 +20,9 @@ const Contact = () => {
             <h1>Contact Us</h1>
             <div style={{marginTop: "30px"}}>
                 <p><b>Address</b>: aleksander.ontin@gmail.com</p>
-                <p><b>LinkedIn</b>: <a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/aleksander-ontin-818162310/">https://www.linkedin.com/in/aleksander-ontin-818162310/</a></p>
+                <br />
+                <p><b>LinkedIn</b>:</p>
+                <p><a rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/aleksander-ontin-818162310/">https://www.linkedin.com/in/aleksander-ontin-818162310/</a></p>
             </div>
         </div>
     );
