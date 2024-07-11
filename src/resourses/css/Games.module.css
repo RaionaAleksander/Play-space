@@ -34,7 +34,6 @@
 
 .textItem {
     text-align: justify;
-    font-size: 17px;
     line-height: 1.5;
 }
 
@@ -50,4 +49,50 @@
 .buttonItem:hover {
     color: lightgray;
     font-size: 17px;
+}
+
+@media (max-width: 500px) {
+    .imageContainer {
+        padding: 10px;
+    }
+
+    .imageItem {
+        width: 80px;
+    }
+
+    .textContainer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+@media (min-width: 501px) and (max-width: 800px) {
+    .imageContainer {
+        padding: 15px;
+    }
+
+    .imageItem {
+        width: 140px;
+    }
+
+    .textContainer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .imageContainer {
+        padding: 30px;
+    }
+
+    .imageItem {
+        width: 300px;
+    }
+
+    .textContainer {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
 }

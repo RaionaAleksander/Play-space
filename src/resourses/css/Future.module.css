@@ -1,5 +1,7 @@
 .toggleInput {
     width: 384px;
+    border: 2px solid black;
+    border-radius: 4px;
 }
 
 @media (min-width: 400px) and (max-width: 600px) {

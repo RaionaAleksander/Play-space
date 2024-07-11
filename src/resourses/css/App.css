@@ -65,8 +65,21 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-
 @media (max-width: 400px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p, th, td {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
     h1 {
         font-size: 32px;
     }
