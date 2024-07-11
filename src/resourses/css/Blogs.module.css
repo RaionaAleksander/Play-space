@@ -9,15 +9,11 @@
 .blogArea {
     width: 80%;
     margin-bottom: 20px;
+    resize: vertical;
+    border: 2px solid darkred;
+    border-radius: 4px;
 }
 
 .hrObject {
     width: 80%;
-}
-
-@media (max-width: 400px) {
-}
-
-@media (min-width: 401px) and (max-width: 600px) {
-    
 }
