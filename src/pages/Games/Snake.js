@@ -182,6 +182,26 @@ const Snake = () => {
         setSettingsOpen(!settingsOpen);
     }
 
+    function handleOnClickLeft() { // ButtonLeft
+        if (direction !== "right") setDirection("left");
+    }
+
+    function handleOnClickRight() { // ButtonRight
+        if (direction !== "left") setDirection("right");
+    }
+
+    function handleOnClickUp() { // ButtonUp
+        if (direction !== "down") setDirection("up");
+    }
+
+    function handleOnClickDown() { // ButtonDown
+        if (direction !== "up") setDirection("down");
+    }
+
+    function handleOnClickMiddle() { // ButtonMiddle
+        console.log("The button in the middle of the controller does nothing!!!")
+    }
+
     return (
         <div className="startPage">
             <div className={styles.snakeContainer}>
@@ -190,6 +210,19 @@ const Snake = () => {
                     <canvas ref={canvasRef} id="game" width="400" height="400" className={styles.snakeCanvas} style={{backgroundColor: fieldColor}}></canvas>
                 </div>
                 {win && <p className="winText"><b>You win!</b></p>}
+
+                {/* CONTROLLER*/}
+                <div className={styles.controller}>
+                    <button onClick={handleOnClickUp} className={styles.buttonUP}>▲</button>
+                    <div className={styles.buttonMIDDLE}>
+                        <button onClick={handleOnClickLeft} className={styles.buttonLEFT}>◄</button>
+                        <button onClick={handleOnClickMiddle} className={styles.buttonCENTER}>○</button>
+                        <button onClick={handleOnClickRight} className={styles.buttonRIGHT}>►</button>
+                    </div>
+                    <button onClick={handleOnClickDown} className={styles.buttonDOWN}>▼</button>
+                </div>
+
+                {/* START/RESTART/SETTINGS */}
                 <div className={styles.buttonsContainer}>
                     <button className={styles.snakeButton + ' ' + styles.pauseStart} onClick={handleOnClickPaustStart}
                     style={{backgroundColor: (pause ? ("lightgreen") : ("lightcoral"))}}>
@@ -210,6 +243,8 @@ const Snake = () => {
                     </button> 
                 </div>
             </div>
+
+            {/* SETTINGS */}
             <div className={styles.overlayPanel} style={{display: (settingsOpen ? ("block") : ("none"))}}>
                 <h3>The game settings</h3>
                 <div className={styles.overlayContainer}>

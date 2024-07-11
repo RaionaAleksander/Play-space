@@ -21,6 +21,40 @@
     margin: 2px;
 }
 
+/* CONTROLLER */
+
+.controller {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.buttonMIDDLE {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.buttonUP, .buttonLEFT, .buttonRIGHT, .buttonDOWN, .buttonCENTER {
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+.buttonUP, .buttonLEFT, .buttonRIGHT, .buttonDOWN {
+    padding: 12px;
+}
+
+.buttonCENTER {
+    padding: 12px 15px 12px;
+}
+
+
+/* START/RESTART/SETTINGS */
+
 .buttonsContainer {
     margin-top: 20px;
     display: flex;
