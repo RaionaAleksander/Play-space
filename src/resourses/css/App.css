@@ -74,12 +74,12 @@ body {
         font-size: 18px;
     }
 
-    p, th, td {
+    p, th, td, button {
         font-size: 12px;
     }
 }
 
-@media (min-width: 400px) and (max-width: 600px) {
+@media (min-width: 401px) and (max-width: 600px) {
     h1 {
         font-size: 32px;
     }
@@ -88,19 +88,19 @@ body {
         font-size: 22px;
     }
 
-    p, th, td {
+    p, th, td, button {
         font-size: 14px;
     }
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1599px){
     p, th, td {
         font-size: 18px;
     }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1600px) and (max-width: 1999px){
     h1 {
         font-size: 46px;
     }
@@ -110,7 +110,7 @@ body {
     }
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 2000px) and (max-width: 2599px){
     h1 {
         font-size: 50px;
     }

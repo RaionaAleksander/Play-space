@@ -1,0 +1,12 @@
+.copyContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.copyButton {
+    background-color: black;
+    color: white;
+    padding: 4px;
+}
