@@ -183,9 +183,9 @@ const HeroClicker = () => {
     }, [isLeveled]);
 
     return (
-      <div class="startPage">
+      <div className="startPage">
         <div className={styles.heroContainer}>
-            <h1 class="pixel-font" className={styles.heroName}>Hero Clicker</h1>
+            <h1 className={styles.heroName}>Hero Clicker</h1>
             <div className={styles.heroBorder}>
                 <div className={styles.heroCanvas}>
                     <img src={(isLeveled) ? WarriorLv : Warrior} alt="Hero is warrior" className={styles.heroImage} />
@@ -227,32 +227,6 @@ const HeroClicker = () => {
                 </button>
             </div>
         </div>
-
-        {/*
-        <hr />
-
-        <hr />
-        <div className={styles.container}>
-            <img src={(isLeveled) ? WarriorLv : Warrior} alt="Hero is warrior" className={styles.image} />
-            <div>
-                <h2>LEVEL: {LEVEL}</h2>
-                <h3>Experience of Level: {(LEVELRef.current >= 100) ? "-" : formatNumber(ExpLevel)} / {(LEVELRef.current >= 100) ? "-" : formatNumber(MaxExpLevel)} </h3>
-                <br />
-                <h3><i>Experience {'('}EXP{')'} and gold multipliers</i></h3>
-                <h4>Experience Multiplier: x{formatNumber(ExpMUL)}</h4>
-                <h4>Gold Multiplier: x{formatNumber(GoldMUL)}</h4>
-                <br />
-                <h3><i>Gold and Costs</i></h3>
-                <h4>Current Gold: {formatNumber(GOLD)} </h4>
-                <br />
-                <h4>Gold Multiplier Cost: {formatNumber(costOfGold)}</h4>
-                <h4>EXP Multiplier Cost: {formatNumber(costOfExp)}</h4>
-                <div className={styles.smallImages}>
-                    <img onClick={handleClickG} className={styles.smallImage} src={(GOLD < costOfGold) ? ButtonGLock : ButtonG} alt="Gold button" />
-                    <img onClick={handleClickE} className={styles.smallImage} src={(GOLD < costOfExp) ? ButtonELock : ButtonE} alt="Exp button" />
-                </div>
-            </div>
-        </div>*/}
       </div>
     );
 };

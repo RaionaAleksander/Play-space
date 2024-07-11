@@ -21,7 +21,7 @@ const Home = () => {
     })
 
     return (
-        <div class="startPage">
+        <div className="startPage">
             <div className={styles.gamepadPosition}>
                 <img 
                     alt="Gamepad-home"

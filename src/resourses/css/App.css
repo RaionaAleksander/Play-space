@@ -74,7 +74,7 @@ body {
         font-size: 18px;
     }
 
-    p, th, td, button {
+    p, th, td, button, textarea {
         font-size: 12px;
     }
 }
@@ -88,14 +88,14 @@ body {
         font-size: 22px;
     }
 
-    p, th, td, button {
+    p, th, td, button, textarea {
         font-size: 14px;
     }
 }
 
 
 @media (min-width: 1200px) and (max-width: 1599px){
-    p, th, td {
+    p, th, td, textarea {
         font-size: 18px;
     }
 }
@@ -105,7 +105,7 @@ body {
         font-size: 46px;
     }
 
-    p, th, td {
+    p, th, td, textarea {
         font-size: 20px;
     }
 }
@@ -115,7 +115,7 @@ body {
         font-size: 50px;
     }
 
-    p, th, td {
+    p, th, td, textarea {
         font-size: 22px;
     }
 }
@@ -125,7 +125,7 @@ body {
         font-size: 54px;
     }
 
-    p, th, td {
+    p, th, td, textarea {
         font-size: 24px;
     }
 }

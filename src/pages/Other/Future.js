@@ -49,7 +49,7 @@ const Future = () => {
     ];
 
     return (
-        <div class="startPage">
+        <div className="startPage">
             <h1>Timer and components</h1>
 
             <h2 style={{textAlign: "center"}}>Timer: now is {seconds} seconds!</h2>

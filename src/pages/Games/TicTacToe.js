@@ -122,7 +122,7 @@ const TicTacToe = () => {
   });
 
   return (
-    <div class="startPage">
+    <div className="startPage">
       <h1>Tic Tac Toe</h1>
       <div className={styles.tictactoeContainer}>
         <div className={styles.TicTacToeMenu}>

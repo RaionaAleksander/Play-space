@@ -50,7 +50,7 @@ const Contact = () => {
     };
 
     return (
-        <div class="startPage">
+        <div className="startPage">
             <h1>Contact Us</h1>
             <div style={{marginTop: "30px"}}>
                 <p><b>Address</b>:</p>

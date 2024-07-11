@@ -27,7 +27,7 @@ const AboutUs = () => {
     const year = currentDate.getFullYear();
 
     return (
-        <div class="startPage">
+        <div className="startPage">
             <h1>About Us</h1>
             <div className={styles.aboutUsPosition}>
                 <div className={styles.informationFiled}>

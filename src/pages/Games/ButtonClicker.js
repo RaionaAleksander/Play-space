@@ -63,7 +63,7 @@ const ButtonClicker = () => {
     }
 
     return (
-      <div class="startPage">
+      <div className="startPage">
         <h1>Button Clicker</h1>
         <div className={styles.buttonContainer}>
             <h2>"The button was clicked {clicks} times!"</h2>
@@ -78,7 +78,7 @@ const ButtonClicker = () => {
                         alt="This is red button"
                 />
             </div>
-            {win && <p class="winText"><b>You win!</b></p>}
+            {win && <p className="winText"><b>You win!</b></p>}
             <button className={styles.buttonButton + ' ' + styles.restart} onClick={handleOnClickRestart}>
                 Restart
                 <img width="14px" style={{marginLeft: "6px"}} src={Restart} alt="Restart"></img>

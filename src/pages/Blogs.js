@@ -1,6 +1,7 @@
 // Blogs.js
 import React, { useState, useCallback } from 'react';
 import Todos from './Blogs_components/Todos.js';
+import styles from '../resourses/css/Blogs.module.css';
 
 const Blogs = () => {
     const [textarea, setTextarea] = useState(
@@ -17,15 +18,14 @@ const Blogs = () => {
     }, [textarea]);
 
     return (
-        <div class="startPage">
+        <div className="startPage">
             <h1>Blog Articles</h1>
-            <div>
-                <textarea style={{width: "99.5%"}} value={textarea} onChange={handleChange} />
-                <br />
+            <div className={styles.blogsContainer}>
+                <textarea className={styles.blogArea} value={textarea} onChange={handleChange} />
                 <Todos todos={todos} addTodo={addTodo} />
-                <hr />
+                <hr className={styles.hrObject} />
                 <p>You can write something here!</p>
-                <hr />
+                <hr className={styles.hrObject} />
             </div>
         </div>
     );

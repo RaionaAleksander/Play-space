@@ -1,0 +1,23 @@
+.blogsContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blogArea {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.hrObject {
+    width: 80%;
+}
+
+@media (max-width: 400px) {
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+    
+}

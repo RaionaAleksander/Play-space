@@ -183,13 +183,13 @@ const Snake = () => {
     }
 
     return (
-        <div class="startPage">
+        <div className="startPage">
             <div className={styles.snakeContainer}>
-                <h1 class="snakeGame">The Snake game</h1>
+                <h1 className="snakeGame">The Snake game</h1>
                 <div className={styles.snakeBorder}>
                     <canvas ref={canvasRef} id="game" width="400" height="400" className={styles.snakeCanvas} style={{backgroundColor: fieldColor}}></canvas>
                 </div>
-                {win && <p class="winText"><b>You win!</b></p>}
+                {win && <p className="winText"><b>You win!</b></p>}
                 <div className={styles.buttonsContainer}>
                     <button className={styles.snakeButton + ' ' + styles.pauseStart} onClick={handleOnClickPaustStart}
                     style={{backgroundColor: (pause ? ("lightgreen") : ("lightcoral"))}}>

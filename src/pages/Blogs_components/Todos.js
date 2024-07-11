@@ -6,7 +6,7 @@ const Todos = ({todos, addTodo}) => {
             {todos.map((todo, index) => {
                 return (
                     <>
-                        <hr />
+                        <hr style={{width: "80%"}}/>
                         <p key={index}>{todo}</p>
                         <br />
                     </>

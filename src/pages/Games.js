@@ -34,8 +34,8 @@ const Games = () => {
     }
 
     return (
-        <div class="startPage">
-            <h1 class="gameText">Games</h1>
+        <div className="startPage">
+            <h1 className="gameText">Games</h1>
             <p><u><b>This page contains a list of various games:</b></u></p>
 
             <div className={styles.gameContainer} style={{backgroundColor: "lightblue"}} 
