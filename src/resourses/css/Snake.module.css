@@ -8,17 +8,17 @@
 }
 
 .snakeBorder {
-    border: 3px solid black;
-    border-radius: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
     background-color: darkgray;
     margin-top: 20px;
-    width: 409px;
-    height: 409px;
+    width: 407px;
+    height: 407px;
 }
 
 .snakeCanvas {
     border: 1px solid gray;
-    margin: 4px;
+    margin: 3px;
 }
 
 .buttonsContainer {
