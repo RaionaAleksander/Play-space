@@ -1,0 +1,15 @@
+.toggleInput {
+    width: 384px;
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+    .toggleInput {
+        width: 300px;
+    }
+}
+
+@media (max-width: 399px) {
+    .toggleInput {
+        width: 250px;
+    }
+}

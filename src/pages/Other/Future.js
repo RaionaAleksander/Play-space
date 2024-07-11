@@ -1,6 +1,7 @@
 // Future.js
 import React, {useState, useEffect, createContext} from 'react';
 import Component2 from '../Future_conponents/Component2'; 
+import styles from '../../resourses/css/Future.module.css';
 
 export const UserContext = createContext();
 
@@ -89,7 +90,8 @@ const Future = () => {
                     ))}
                     {'"'}
                 </div>
-                <input style={{width: "384px"}}
+                <input
+                    className={styles.toggleInput}
                     type="text"
                     value={text}
                     onChange={handleChange}
