@@ -9,7 +9,7 @@
     justify-content: space-around;
     flex-direction: row;
     align-items: baseline;
-    width: 680px;
+    gap: 40px;
 }
 
 .boardContainer {
@@ -73,6 +73,14 @@
         align-items: center;
         flex-direction: column;
     }
+
+    .TicTacToeMenu {
+        gap: 0px;
+    }
+
+    .listObject {
+        margin-top: 22px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -86,5 +94,50 @@
     .squareButton {
         width: 88px;
         height: 88px;
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1599px){
+    .squareButton {
+        width: 120px;
+        height: 120px;
+    }
+
+    .TicTacToeMenu {
+        gap: 50px;
+    }
+}
+
+@media (min-width: 1600px) and (max-width: 1999px){
+    .squareButton {
+        width: 126px;
+        height: 126px;
+    }
+
+    .TicTacToeMenu {
+        gap: 60px;
+    }
+}
+
+@media (min-width: 2000px) and (max-width: 2599px){
+    .squareButton {
+        width: 136px;
+        height: 136px;
+    }
+
+    .TicTacToeMenu {
+        gap: 70px;
+    }
+}
+
+@media (min-width: 2600px) {
+    .squareButton {
+        width: 146px;
+        height: 146px;
+    }
+
+    .TicTacToeMenu {
+        gap: 80px;
     }
 }
