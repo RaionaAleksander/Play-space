@@ -12,13 +12,13 @@
     border-radius: 4px;
     background-color: darkgray;
     margin-top: 20px;
-    width: 407px;
-    height: 407px;
+    width: 405px;
+    height: 405px;
 }
 
 .snakeCanvas {
     border: 1px solid gray;
-    margin: 3px;
+    margin: 2px;
 }
 
 .buttonsContainer {
