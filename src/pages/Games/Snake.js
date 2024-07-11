@@ -60,16 +60,16 @@ const Snake = () => {
         const handleKeyDown = (e) => {
             switch (e.keyCode) {
                 case 37: // ArrowLeft
-                    if (direction !== "right") setDirection("left");
+                    if (pause === false && direction !== "right") setDirection("left");
                     break;
                 case 38: // ArrowUp
-                    if (direction !== "down") setDirection("up");
+                    if (pause === false && direction !== "down") setDirection("up");
                     break;
                 case 39: // ArrowRight
-                    if (direction !== "left") setDirection("right");
+                    if (pause === false && direction !== "left") setDirection("right");
                     break;
                 case 40: // ArrowDown
-                    if (direction !== "up") setDirection("down");
+                    if (pause === false && direction !== "up") setDirection("down");
                     break;
                 default:
                     break;
@@ -80,7 +80,7 @@ const Snake = () => {
         return () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
-    }, [direction]);
+    }, [direction, pause]);
 
     useEffect(() => {
         if (pause) return;
@@ -183,19 +183,19 @@ const Snake = () => {
     }
 
     function handleOnClickLeft() { // ButtonLeft
-        if (direction !== "right") setDirection("left");
+        if (pause === false && direction !== "right") setDirection("left");
     }
 
     function handleOnClickRight() { // ButtonRight
-        if (direction !== "left") setDirection("right");
+        if (pause === false && direction !== "left") setDirection("right");
     }
 
     function handleOnClickUp() { // ButtonUp
-        if (direction !== "down") setDirection("up");
+        if (pause === false && direction !== "down") setDirection("up");
     }
 
     function handleOnClickDown() { // ButtonDown
-        if (direction !== "up") setDirection("down");
+        if (pause === false && direction !== "up") setDirection("down");
     }
 
     function handleOnClickMiddle() { // ButtonMiddle
