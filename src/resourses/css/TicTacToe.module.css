@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .TicTacToeMenu {
@@ -66,4 +65,26 @@
 .listButton {
     margin-left: 4px;
     background-color: lightgray;
+}
+
+@media (max-width: 800px) {
+    .TicTacToeMenu {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 400px) {
+    .squareButton {
+        width: 76px;
+        height: 76px;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+    .squareButton {
+        width: 88px;
+        height: 88px;
+    }
 }
