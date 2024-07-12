@@ -79,31 +79,25 @@
     background-color: darkgray;
 }
 
+@media (max-width: 800px) {
+    .heroImage {
+        height: 280px;
+    }
 
+    /*.heroCanvas {
+        justify-content: center;
+    }*/
 
-/*
-
-.container {
-    background-color: lightgray;
-    display: flex;
-    justify-content: space-around;
-    padding: 20px; 
-    margin: 30px;
-}
-  
-.image {
-    margin-right: 10px;
-    width: auto;
-    height: 580px;
+    .heroBorder {
+        width: 480px;
+    }
 }
 
-.smallImages {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
+
+@media (max-width: 400px) {
+    
 }
-  
-.smallImage {
-    width: 20%;
-    height: auto;
-}*/
+
+@media (min-width: 401px) and (max-width: 600px) {
+    
+}

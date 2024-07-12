@@ -191,20 +191,20 @@ const HeroClicker = () => {
                     <img src={(isLeveled) ? WarriorLv : Warrior} alt="Hero is warrior" className={styles.heroImage} />
                     <div className={styles.interfaceField}>
                         <h2>LEVEL: {LEVEL}</h2>
-                        <h3>Level progress: {(win) ? "-" : formatNumber(ExpLevel)} / {(win) ? "-" : formatNumber(MaxExpLevel)} </h3>
+                        <p><b>Level progress: {(win) ? "-" : formatNumber(ExpLevel)} / {(win) ? "-" : formatNumber(MaxExpLevel)}</b></p>
                         <h3 className={styles.header}><i><u>Experience and gold multipliers</u></i></h3>
-                        <h4>Experience Multiplier: x{formatNumber(ExpMUL)}</h4>
-                        <h4>Gold Multiplier: x{formatNumber(GoldMUL)}</h4>
+                        <p><b>Experience Multiplier: x{formatNumber(ExpMUL)}</b></p>
+                        <p><b>Gold Multiplier: x{formatNumber(GoldMUL)}</b></p>
                         <h3 className={styles.header}><i><u>Gold and Costs</u></i></h3>
-                        <h4>Current Gold: {formatNumber(GOLD)} </h4>
+                        <p><b>Current Gold: {formatNumber(GOLD)} </b></p>
                         <div className={styles.buttonsField}>
                             <div className={styles.upgradeField}>
                                 <img onClick={handleClickG} className={styles.smallButton} src={(GOLD < costOfGold) ? ButtonGLock : ButtonG} alt="Gold button" />
-                                <h4>Upgrade: {formatNumber(costOfGold)}</h4>
+                                <p><b>Upgrade: {formatNumber(costOfGold)}</b></p>
                             </div>
                             <div className={styles.upgradeField}>
                                 <img onClick={handleClickE} className={styles.smallButton} src={(GOLD < costOfExp) ? ButtonELock : ButtonE} alt="Exp button" />
-                                <h4>Upgrade: {formatNumber(costOfExp)}</h4>
+                                <p><b>Upgrade: {formatNumber(costOfExp)}</b></p>
                             </div>
                         </div>
                     </div>
