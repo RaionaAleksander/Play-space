@@ -114,7 +114,8 @@
 
 @media (min-width: 401px) and (max-width: 600px) {
     .heroImage {
-        height: 260px;
+        margin: 8px;
+        height: 250px;
     }
 
     .heroBorder {
@@ -128,6 +129,7 @@
 
 @media (max-width: 400px) {
     .heroImage {
+        margin: 4px;
         height: 240px;
     }
 
