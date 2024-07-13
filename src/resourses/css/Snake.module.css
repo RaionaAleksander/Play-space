@@ -29,11 +29,10 @@
     justify-content: space-around;
     align-items: center;
     gap: 4px;
-    width: 100%;
 }
 
 .buttonUP, .buttonLEFT, .buttonRIGHT, .buttonDOWN, .buttonCENTER {
-    font-size: 30px;
+    font-size: 26px;
     background-color: black;
     color: white;
 }
