@@ -47,7 +47,7 @@ const Snake = () => {
 
     const canvasRef = useRef(null);
     const [snake, setSnake] = useState([{ x: 0, y: 9 }]);
-    const [food, setFood] = useState({ x: Math.floor(Math.random() * 20), y: Math.floor(Math.random() * 20) });
+    const [food, setFood] = useState({ x: Math.floor(Math.random() * 18), y: Math.floor(Math.random() * 18) });
     const [direction, setDirection] = useState("right");
     const [settingsOpen, setSettingsOpen] = useState(false);
 
@@ -91,13 +91,13 @@ const Snake = () => {
         const drawSnake = () => {
             ctx.fillStyle = snakeColor;
             snake.forEach(part => {
-                ctx.fillRect(part.x * 20, part.y * 20, 20, 20);
+                ctx.fillRect(part.x * 18, part.y * 18, 18, 18);
             });
         };
 
         const drawFood = () => {
             ctx.fillStyle = foodColor;
-            ctx.fillRect(food.x * 20, food.y * 20, 20, 20);
+            ctx.fillRect(food.x * 18, food.y * 18, 18, 18);
         };
 
         const drawScore = () => {
@@ -120,6 +120,8 @@ const Snake = () => {
             
             newSnake.unshift(head);
 
+            console.log(snake.length);
+
             if (snake.length === 20 * 20) {
                 setWin(true);
                 setPause(true);
@@ -127,10 +129,10 @@ const Snake = () => {
             }
 
             if (head.x === food.x && head.y === food.y) {
-                let newFoodPosition = { x: Math.floor(Math.random() * 20), y: Math.floor(Math.random() * 20) };
+                let newFoodPosition = { x: Math.floor(Math.random() * 18), y: Math.floor(Math.random() * 18) };
 
                 while (isFoodOnSnake(newSnake, newFoodPosition)) {
-                    newFoodPosition = { x: Math.floor(Math.random() * 20), y: Math.floor(Math.random() * 20) };
+                    newFoodPosition = { x: Math.floor(Math.random() * 18), y: Math.floor(Math.random() * 18) };
                 }
 
                 setFood(newFoodPosition);
@@ -144,7 +146,7 @@ const Snake = () => {
             if (head.x < 0 || head.x >= 20 || head.y < 0 || head.y >= 20 || newSnake.slice(1).some(part => part.x === head.x && part.y === head.y)) {
                 setScore(0);
                 setSnake([{ x: 0, y: 9 }]);
-                setFood({ x: Math.floor(Math.random() * 20), y: Math.floor(Math.random() * 20) });
+                setFood({ x: Math.floor(Math.random() * 18), y: Math.floor(Math.random() * 18) });
                 setDirection("right");
             }
         };
@@ -174,7 +176,7 @@ const Snake = () => {
         setPause(false);
         setScore(0);
         setSnake([{ x: 0, y: 9 }]);
-        setFood({ x: Math.floor(Math.random() * 20), y: Math.floor(Math.random() * 20) });
+        setFood({ x: Math.floor(Math.random() * 18), y: Math.floor(Math.random() * 18)});
         setDirection("right");
     }
 
@@ -207,7 +209,7 @@ const Snake = () => {
             <div className={styles.snakeContainer}>
                 <h1 className="snakeGame">The Snake game</h1>
                 <div className={styles.snakeBorder}>
-                    <canvas ref={canvasRef} id="game" width="400" height="400" className={styles.snakeCanvas} style={{backgroundColor: fieldColor}}></canvas>
+                    <canvas ref={canvasRef} id="game" width="360" height="360" className={styles.snakeCanvas} style={{backgroundColor: fieldColor}}></canvas>
                 </div>
                 {win && <p className="winText"><b>You win!</b></p>}
 
