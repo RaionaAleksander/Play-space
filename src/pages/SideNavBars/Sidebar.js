@@ -47,7 +47,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link className={styles.buttonItem + ' ' + styles.borderDown  + ' ' + styles.brAfter} to="/future">
                     <span className={styles.buttonText} >Interesting</span>
                 </Link>
-                <br />
                 <Link className={styles.buttonItem + ' ' + styles.borderUp + ' ' + styles.borderDown} to="/about_us">
                     <span className={styles.buttonText} >About Us</span>
                 </Link>
