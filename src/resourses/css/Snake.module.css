@@ -26,13 +26,14 @@
 .buttonMIDDLE {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     gap: 4px;
     width: 100%;
 }
 
 .buttonUP, .buttonLEFT, .buttonRIGHT, .buttonDOWN, .buttonCENTER {
-    font-size: 24px;
+    font-size: 30px;
     background-color: black;
     color: white;
 }
