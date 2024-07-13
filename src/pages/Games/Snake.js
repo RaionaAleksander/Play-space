@@ -14,6 +14,9 @@ const Snake = () => {
     const [snakeColor, setSnakeColor] = useState("green")
     const [foodColor, setFoodColor] = useState("red");
     const [fieldColor, setFieldColor] = useState("black");
+    const [fieldSize, setFieldSize] = useState(360);
+    const [cells, setCells] = useState(20);
+    const [isDisplay, setIsDisplay] = useState(true);
 
     const [selectedOptionSnakeColor, setSelectedOptionSnakeColor] = useState("green");
 
@@ -33,10 +36,32 @@ const Snake = () => {
         setSelectedOptionFieldColor(event.target.value);
     };
 
+    const [selectedOptionFieldSize, setSelectedOptionFieldSize] = useState(360);
+
+    const handleSelectChangeFieldSize = (event) => {
+        setSelectedOptionFieldSize(event.target.value);
+    };
+
+    const [selectedOptionCells, setSelectedOptionCells] = useState(20);
+
+    const handleSelectChangeCells = (event) => {
+        setSelectedOptionCells(event.target.value);
+    };
+
+    const [checkedDisplay, setCheckedDisplay] = useState(true);
+
+    const handleCheckboxChange = (event) => {
+        setCheckedDisplay(event.target.checked);
+      };
+
     function applyChanges() {
         setSnakeColor(selectedOptionSnakeColor);
         setFoodColor(selectedOptionFoodColor);
         setFieldColor(selectedOptionFieldColor);
+        setFieldSize(selectedOptionFieldSize);
+        setCells(selectedOptionCells);
+        setIsDisplay(checkedDisplay);
+
 
         handleOnClickRestart();
         setSettingsOpen(false);
@@ -46,8 +71,8 @@ const Snake = () => {
 
 
     const canvasRef = useRef(null);
-    const [snake, setSnake] = useState([{ x: 0, y: 9 }]);
-    const [food, setFood] = useState({ x: Math.floor(Math.random() * 18), y: Math.floor(Math.random() * 18) });
+    const [snake, setSnake] = useState([{ x: 0, y: Math.floor(cells/2) }]);
+    const [food, setFood] = useState({ x: Math.floor(Math.random() * cells), y: Math.floor(Math.random() * cells) });
     const [direction, setDirection] = useState("right");
     const [settingsOpen, setSettingsOpen] = useState(false);
 
@@ -87,17 +112,18 @@ const Snake = () => {
 
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
+        const cellsSize = fieldSize/cells;
 
         const drawSnake = () => {
             ctx.fillStyle = snakeColor;
             snake.forEach(part => {
-                ctx.fillRect(part.x * 18, part.y * 18, 18, 18);
+                ctx.fillRect(part.x * cellsSize, part.y * cellsSize, cellsSize, cellsSize);
             });
         };
 
         const drawFood = () => {
             ctx.fillStyle = foodColor;
-            ctx.fillRect(food.x * 18, food.y * 18, 18, 18);
+            ctx.fillRect(food.x * cellsSize, food.y * cellsSize, cellsSize, cellsSize);
         };
 
         const drawScore = () => {
@@ -122,17 +148,17 @@ const Snake = () => {
 
             console.log(snake.length);
 
-            if (snake.length === 20 * 20) {
+            if (snake.length === cells * cells) {
                 setWin(true);
                 setPause(true);
                 return;
             }
 
             if (head.x === food.x && head.y === food.y) {
-                let newFoodPosition = { x: Math.floor(Math.random() * 18), y: Math.floor(Math.random() * 18) };
+                let newFoodPosition = { x: Math.floor(Math.random() * cells), y: Math.floor(Math.random() * cells) };
 
                 while (isFoodOnSnake(newSnake, newFoodPosition)) {
-                    newFoodPosition = { x: Math.floor(Math.random() * 18), y: Math.floor(Math.random() * 18) };
+                    newFoodPosition = { x: Math.floor(Math.random() * cells), y: Math.floor(Math.random() * cells) };
                 }
 
                 setFood(newFoodPosition);
@@ -143,10 +169,10 @@ const Snake = () => {
 
             setSnake(newSnake);
 
-            if (head.x < 0 || head.x >= 20 || head.y < 0 || head.y >= 20 || newSnake.slice(1).some(part => part.x === head.x && part.y === head.y)) {
+            if (head.x < 0 || head.x >= cells || head.y < 0 || head.y >= cells || newSnake.slice(1).some(part => part.x === head.x && part.y === head.y)) {
                 setScore(0);
-                setSnake([{ x: 0, y: 9 }]);
-                setFood({ x: Math.floor(Math.random() * 18), y: Math.floor(Math.random() * 18) });
+                setSnake([{ x: 0, y: Math.floor(cells/2) }]);
+                setFood({ x: Math.floor(Math.random() * cells), y: Math.floor(Math.random() * cells) });
                 setDirection("right");
             }
         };
@@ -166,7 +192,7 @@ const Snake = () => {
         const interval = setInterval(gameLoop, 120);
 
         return () => clearInterval(interval);
-    }, [snake, food, direction, pause, score, snakeColor, fieldColor, foodColor]);
+    }, [snake, food, direction, pause, score, snakeColor, fieldColor, foodColor, cells, fieldSize]);
 
     function handleOnClickPaustStart() {
         setPause(!pause);
@@ -175,8 +201,9 @@ const Snake = () => {
     function handleOnClickRestart() {
         setPause(false);
         setScore(0);
-        setSnake([{ x: 0, y: 9 }]);
-        setFood({ x: Math.floor(Math.random() * 18), y: Math.floor(Math.random() * 18)});
+        setSnake([{ x: 0, y: Math.floor(cells/2) }]);
+        const cellsSize = fieldSize/cells;
+        setFood({ x: Math.floor(Math.random() * cellsSize), y: Math.floor(Math.random() * cellsSize)});
         setDirection("right");
     }
 
@@ -209,11 +236,12 @@ const Snake = () => {
             <div className={styles.snakeContainer}>
                 <h1 className="snakeGame">The Snake game</h1>
                 <div className={styles.snakeBorder}>
-                    <canvas ref={canvasRef} id="game" width="360" height="360" className={styles.snakeCanvas} style={{backgroundColor: fieldColor}}></canvas>
+                    <canvas ref={canvasRef} id="game" width={fieldSize} height={fieldSize} className={styles.snakeCanvas} style={{backgroundColor: fieldColor}}></canvas>
                 </div>
                 {win && <p className="winText"><b>You win!</b></p>}
 
                 {/* CONTROLLER*/}
+                {isDisplay &&
                 <div className={styles.controller}>
                     <button onClick={handleOnClickUp} className={styles.buttonUP}>▲</button>
                     <div className={styles.buttonMIDDLE}>
@@ -222,9 +250,9 @@ const Snake = () => {
                         <button onClick={handleOnClickRight} className={styles.buttonRIGHT}>►</button>
                     </div>
                     <button onClick={handleOnClickDown} className={styles.buttonDOWN}>▼</button>
-                </div>
+                </div>}
 
-                {/* START/RESTART/SETTINGS */}
+                {/* START/RESTART/SETTINGS */} 
                 <div className={styles.buttonsContainer}>
                     <button className={styles.snakeButton + ' ' + styles.pauseStart} onClick={handleOnClickPaustStart}
                     style={{backgroundColor: (pause ? ("lightgreen") : ("lightcoral"))}}>
@@ -276,6 +304,32 @@ const Snake = () => {
                             <option value="black">Black</option>
                             <option value="white">White</option>
                         </select>
+                    </label>
+                    <label className={styles.overlayLabel + " " + styles.overlayLabelDisable}>
+                        The Field size:
+                        <select style={{marginLeft: "4px"}} value={selectedOptionFieldSize} onChange={handleSelectChangeFieldSize}>
+                            <option value="360">360x360</option>
+                            <option value="400">400x400</option>
+                            <option value="440">440x440</option>
+                            <option value="500">500x500</option>
+                        </select>
+                    </label>
+                    <label className={styles.overlayLabel}>
+                        The Field size:
+                        <select style={{marginLeft: "4px"}} value={selectedOptionCells} onChange={handleSelectChangeCells}>
+                            <option value="10">10</option>
+                            <option value="20" selected>20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                        </select>
+                    </label>
+                    <label className={styles.overlayLabel + " " + styles.overlayLabelDisable}>
+                        <input
+                        type="checkbox"
+                        checked={checkedDisplay}
+                        onChange={handleCheckboxChange}
+                        />
+                        Display controller
                     </label>
                     <div className={styles.applyButtonContainer}>
                         <button className={styles.applyButton} onClick={applyChanges}>Apply</button>

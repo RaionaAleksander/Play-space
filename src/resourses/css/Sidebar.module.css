@@ -55,6 +55,10 @@
     text-decoration: none;
 }
 
+.brAfter {
+    margin-bottom: 12px;
+}
+
 .borderUp {
     border-top: 2px solid darkred;
 }

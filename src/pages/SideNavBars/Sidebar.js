@@ -38,14 +38,13 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 <Link className={styles.buttonItem + ' ' + styles.borderDown} to="/">
                     <span className={styles.buttonText} >Home</span>
                 </Link>
-                <Link className={styles.buttonItem + ' ' + styles.borderDown} to="/games/">
+                <Link className={styles.buttonItem + ' ' + styles.borderDown + ' ' + styles.brAfter} to="/games/">
                     <span className={styles.buttonText} >Games</span>
                 </Link>
-                <br />
                 <Link className={styles.buttonItem + ' ' + styles.borderUp + ' ' + styles.borderDown} to="/blogs">
                     <span className={styles.buttonText} >Blogs</span>
                 </Link>
-                <Link className={styles.buttonItem + ' ' + styles.borderDown} to="/future">
+                <Link className={styles.buttonItem + ' ' + styles.borderDown  + ' ' + styles.brAfter} to="/future">
                     <span className={styles.buttonText} >Interesting</span>
                 </Link>
                 <br />
@@ -57,20 +56,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </Link>
             </div>
         </div>
-
-
-        /*
-        <div className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
-          <button className={styles.closeButton} onClick={toggleSidebar}>
-            &times;
-          </button>
-          <ul className={styles.sidebarMenu}>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blogs">Blogs</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/about_us">About Us</a></li>
-          </ul>
-        </div>*/
     );
 };
 

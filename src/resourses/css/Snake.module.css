@@ -77,12 +77,12 @@
 
 .overlayPanel {
     width: 300px;
-    height: 300px;
+    height: 420px;
     position: fixed;
     top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(223, 223, 223, 0.8);
+    background-color: rgba(223, 223, 223, 0.9);
     border: 3px solid lightblue;
     border-radius: 5px;
     padding: 8px;
@@ -106,4 +106,14 @@
     border: 2px solid black;
     padding: 8px;
     text-decoration: none;
+}
+
+@media (max-width: 440px) {
+    .overlayLabelDisable {
+        display: none;
+    }
+
+    .overlayPanel {
+        height: 330px;
+    }
 }
