@@ -7,6 +7,10 @@ import styles from '../resourses/css/NavbarMenu.module.css';
 import Gamepad from '../resourses/images/Gamepad_icon.png';
 import Gamepad_active from '../resourses/images/Gamepad_icon_active.png'; 
 
+
+
+
+
 const Navbarmenu = () => {
     const [isHovered, setIsHovered] = useState(false);
 
@@ -42,6 +46,13 @@ const Navbarmenu = () => {
                                 <Link className={styles.dropdownContentButton} to="/contact">Contact Us</Link>
                             </div>
                         </div>
+                        <button className={styles.sideButton}>
+                            <div className={styles.burgerMenu}>
+                                <div className={styles.rectangle}></div>
+                                <div className={styles.rectangle}></div>
+                                <div className={styles.rectangle}></div>
+                            </div>
+                        </button>
                     </div>
                     <div className={styles.imageContainer}>
                         <img alt="Gamepad icon" src={isHovered ? Gamepad_active : Gamepad} className={styles.imageIcon}></img>

@@ -101,3 +101,44 @@
 .dropdownButton:hover {
     padding-bottom: 9px;
 }
+
+/* FOR MOBILE PHONE */
+
+.sideButton {
+    margin-left: 16px;
+    background-color: black;
+    border: 2px solid darkred;
+    border-radius: 5px;
+    padding: 8px 10px 8px;
+    display: none;
+}
+
+.sideButton:hover {
+    border: 2px solid darkblue;
+
+    .rectangle {
+        background-color: gold;
+    }
+}
+
+.burgerMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5px;
+}
+
+.rectangle {
+    background-color: white;
+    width: 36px;
+    height: 4.5px;
+}
+
+@media (max-width: 600px) {
+    .buttonItem, .dropdownItem {
+        display: none;
+    }
+
+    .sideButton {
+        display: block;
+    }
+}
