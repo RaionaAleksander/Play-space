@@ -64,7 +64,7 @@ const Games = () => {
                 <div className={styles.textContainer}>
                     <h2>Hero Clicker</h2>
                     <p className={styles.textItem}>
-                        <b>Hero Clicker</b>Hero Clicker is a simple clicker game in which the player has to constantly press two different buttons, thus increasing gold and experience.
+                        <b>Hero Clicker</b> is a simple clicker game in which the player has to constantly press two different buttons, thus increasing gold and experience.
                         Experience is needed in order to reach level 100 of the warrior, and the more of it there is every second, the faster the levels will be accumulated. 
                         However, in order to gain more experience, you need to have a lot of gold and its receipt should also be increased.
                         Let's see if you can fully level up your warrior!
