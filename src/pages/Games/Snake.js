@@ -189,7 +189,7 @@ const Snake = () => {
             moveSnake();
         };
 
-        const interval = setInterval(gameLoop, 120);
+        const interval = setInterval(gameLoop, 125);
 
         return () => clearInterval(interval);
     }, [snake, food, direction, pause, score, snakeColor, fieldColor, foodColor, cells, fieldSize]);
