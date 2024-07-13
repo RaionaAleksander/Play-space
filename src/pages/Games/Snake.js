@@ -315,12 +315,12 @@ const Snake = () => {
                         </select>
                     </label>
                     <label className={styles.overlayLabel}>
-                        The Field size:
+                        The Cells number:
                         <select style={{marginLeft: "4px"}} value={selectedOptionCells} onChange={handleSelectChangeCells}>
-                            <option value="10">10</option>
-                            <option value="20" selected>20</option>
-                            <option value="30">30</option>
-                            <option value="40">40</option>
+                            <option value="10">10x10</option>
+                            <option value="20" selected>20x20</option>
+                            <option value="30">30x30</option>
+                            <option value="40">40x40</option>
                         </select>
                     </label>
                     <label className={styles.overlayLabel + " " + styles.overlayLabelDisable}>
