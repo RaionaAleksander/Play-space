@@ -47,9 +47,9 @@ const Games = () => {
                 <div className={styles.textContainer}>
                     <h2>Button Clicker</h2>
                     <p className={styles.textItem}>
-                        In order for you to win, you must press the red button 1000 times. 
-                        Hmm... don't tell me you didn't want to press the round red button once. 
-                        Don't worry, you can do it here.
+                        <b>Button Clicker</b> is a simple clicker game in which the player must repeatedly click a button to increase his score.
+                        To pass the game, the user should press the red button 1000 times 
+                        Hmm... don't tell me you didn't want to press the round red button once.
                     </p>
                     <Link className={styles.buttonItem} to="/games/button_clicker">Play the game</Link>
                 </div>
@@ -64,12 +64,10 @@ const Games = () => {
                 <div className={styles.textContainer}>
                     <h2>Hero Clicker</h2>
                     <p className={styles.textItem}>
-                    You are a warrior hero and are made to fight various monsters in the dungeon.
-                    Increase your experience per battle to reach your cherished goal. 
-                    To do this, click on the "+EXP" button.
-                    Unfortunately, experience costs gold.
-                    You also get gold for every fight and to increase it, click on the "+GOLD" button.
-                    Reach level 100 and then pass the game!
+                        <b>Hero Clicker</b>Hero Clicker is a simple clicker game in which the player has to constantly press two different buttons, thus increasing gold and experience.
+                        Experience is needed in order to reach level 100 of the warrior, and the more of it there is every second, the faster the levels will be accumulated. 
+                        However, in order to gain more experience, you need to have a lot of gold and its receipt should also be increased.
+                        Let's see if you can fully level up your warrior!
                     </p>
                     <Link className={styles.buttonItem} to="/games/hero_clicker">Play the game</Link>
                 </div>
@@ -84,9 +82,9 @@ const Games = () => {
                 <div className={styles.textContainer}>
                     <h2>Tic Tac Toe</h2>
                     <p className={styles.textItem}>
-                    <b>Tic Tac Toe</b> is a two-player game in which the objective is to take turns and mark the correct spaces in a 3x3 (or larger) grid.
-                    Think on your feet but also be careful, as the first player who places three of their marks in a horizontal, vertical or diagonal row wins the game!
-                    How many rounds in a row can you win?
+                        <b>Tic Tac Toe</b> is a two-player game in which the objective is to take turns and mark the correct spaces in a 3x3 (or larger) grid.
+                        Think on your feet but also be careful, as the first player who places three of their marks in a horizontal, vertical or diagonal row wins the game!
+                        How many rounds in a row can you win?
                     </p>
                     <Link className={styles.buttonItem} to="/games/tic-tac-toe">Play the game</Link>
                 </div>
@@ -101,8 +99,8 @@ const Games = () => {
                 <div className={styles.textContainer}>
                     <h2>Snake</h2>
                     <p className={styles.textItem}>
-                    <b>Snake</b> is a genre of action video games where the player maneuvers the end of a growing line, often themed as a snake.
-                    The player must keep the snake from colliding with both other obstacles and itself, which gets harder as the snake lengthens.
+                        <b>Snake</b> is a genre of action video games where the player maneuvers the end of a growing line, often themed as a snake.
+                        The player must keep the snake from colliding with both other obstacles and itself, which gets harder as the snake lengthens.
                     </p>
                     <Link className={styles.buttonItem} to="/games/snake">Play the game</Link>
                 </div>

@@ -7,18 +7,9 @@
     margin: 0;
 }
 
-.snakeBorder {
-    border: 2px solid black;
-    border-radius: 4px;
-    background-color: darkgray;
-    margin-top: 20px;
-    width: 405px;
-    height: 405px;
-}
-
 .snakeCanvas {
-    border: 1px solid gray;
-    margin: 2px;
+    border: 1px solid darkgray;
+    margin: 20px 2px 2px;
 }
 
 /* CONTROLLER */
@@ -35,11 +26,13 @@
 .buttonMIDDLE {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 4px;
+    width: 100%;
 }
 
 .buttonUP, .buttonLEFT, .buttonRIGHT, .buttonDOWN, .buttonCENTER {
-    font-size: 20px;
+    font-size: 24px;
     background-color: black;
     color: white;
 }
@@ -49,14 +42,14 @@
 }
 
 .buttonCENTER {
-    padding: 12px 15px 12px;
+    padding: 12px 16px 12px;
 }
 
 
 /* START/RESTART/SETTINGS */
 
 .buttonsContainer {
-    margin-top: 20px;
+    margin-top: 18px;
     display: flex;
     flex-direction: row;
 }
