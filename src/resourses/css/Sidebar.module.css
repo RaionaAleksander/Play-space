@@ -1,0 +1,69 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -201px;
+    width: 200px;
+    height: 100%;
+    background-color: gray;
+    color: white;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000;
+    border-right: 1px solid black;
+}
+  
+.sidebar.open {
+    left: 0;
+}
+
+.closeButton {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 67px;
+    border: none;
+    border-bottom: 2px solid darkred;
+    background: black;
+    color: white;
+    width: 100%;
+}
+
+.burgerMenu {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5px;
+}
+
+.rectangle {
+    background-color: white;
+    width: 36px;
+    height: 4.5px;
+}
+
+.sidebarMenu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6px;
+}
+
+.buttonItem {
+    width: 100%;
+    padding: 16px 0px 16px;
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+}
+
+.borderUp {
+    border-top: 2px solid darkred;
+}
+
+.borderDown {
+    border-bottom: 2px solid darkred;
+}
+
+.buttonText {
+    margin-left: 15px;
+    font-size: 18px;
+}

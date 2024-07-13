@@ -1,17 +1,13 @@
-// Navbarmenu.js
+// Navbar.js
 import React from 'react';
 import { useState } from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import styles from '../resourses/css/NavbarMenu.module.css';
-import Gamepad from '../resourses/images/Gamepad_icon.png';
-import Gamepad_active from '../resourses/images/Gamepad_icon_active.png'; 
+import styles from '../../resourses/css/Navbar.module.css';
+import Gamepad from '../../resourses/images/Gamepad_icon.png';
+import Gamepad_active from '../../resourses/images/Gamepad_icon_active.png';
 
-
-
-
-
-const Navbarmenu = () => {
+const Navbar = ({ toggleSidebar }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
@@ -46,7 +42,7 @@ const Navbarmenu = () => {
                                 <Link className={styles.dropdownContentButton} to="/contact">Contact Us</Link>
                             </div>
                         </div>
-                        <button className={styles.sideButton}>
+                        <button className={styles.sideButton} onClick={toggleSidebar}>
                             <div className={styles.burgerMenu}>
                                 <div className={styles.rectangle}></div>
                                 <div className={styles.rectangle}></div>
@@ -59,9 +55,8 @@ const Navbarmenu = () => {
                     </div>
                 </div>
             </div>
-            <Outlet />
         </>
     )
 };
 
-export default Navbarmenu;
+export default Navbar;

@@ -13,7 +13,8 @@ import TicTacToe from './pages/Games/TicTacToe';
 import Snake from './pages/Games/Snake';
 import AboutUs from './pages/Other/AboutUs';
 
-import Navbarmenu from './pages/Navbarmenu';
+//import Navbarmenu from './pages/Navbarmenu';
+import SideNavBarsLayout from './pages/SideNavBarsLayout';
 import ScrollToTop from './ScrollToTop';
 
 import './resourses/css/App.css';
@@ -23,19 +24,21 @@ export default function App() {
         <BrowserRouter>
             <ScrollToTop />
             <Routes>
-                <Route path="/" element={<Navbarmenu />}>
-                <Route index element={<Home />} />
-                <Route path="blogs" element={<Blogs />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="future" element={<Future />} />
-                <Route path="games/" element={<Games />}/>
-                <Route path="games/button_clicker" element={<ButtonClicker />} />
-                <Route path="games/hero_clicker" element={<HeroClicker />} />
-                <Route path="games/tic-tac-toe" element={<TicTacToe />} />
-                <Route path="games/snake" element={<Snake />} />
-                <Route path="about_us" element={<AboutUs />} />
-                <Route path="*" element={<NoPage />} />
+                {/*<Route path="/" element={<Navbarmenu />}>*/}
+                <Route path="/" element={<SideNavBarsLayout />}>
+                    <Route index element={<Home />} />
+                    <Route path="blogs" element={<Blogs />} />
+                    <Route path="contact" element={<Contact />} />
+                    <Route path="future" element={<Future />} />
+                    <Route path="games/" element={<Games />}/>
+                    <Route path="games/button_clicker" element={<ButtonClicker />} />
+                    <Route path="games/hero_clicker" element={<HeroClicker />} />
+                    <Route path="games/tic-tac-toe" element={<TicTacToe />} />
+                    <Route path="games/snake" element={<Snake />} />
+                    <Route path="about_us" element={<AboutUs />} />
+                    <Route path="*" element={<NoPage />} />
                 </Route>
+                {/*</Route>*/}
             </Routes>
         </BrowserRouter>
     );
