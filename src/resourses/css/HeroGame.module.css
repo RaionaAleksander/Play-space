@@ -103,6 +103,11 @@
         flex-direction: column;
     }
 
+    .heroImage {
+        margin: 0px;
+        margin-top: 10px;
+    }
+
     .header {
         margin-top: 20px;
     }
@@ -114,7 +119,6 @@
 
 @media (min-width: 401px) and (max-width: 600px) {
     .heroImage {
-        margin: 4px;
         height: 250px;
     }
 
@@ -129,7 +133,6 @@
 
 @media (max-width: 400px) {
     .heroImage {
-        margin: 0px;
         height: 240px;
     }
 
