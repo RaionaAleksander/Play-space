@@ -109,14 +109,6 @@
     display: none;
 }
 
-.sideButton:hover {
-    border: 2px solid darkblue;
-
-    .rectangle {
-        background-color: gold;
-    }
-}
-
 .burgerMenu {
     display: flex;
     flex-direction: column;
