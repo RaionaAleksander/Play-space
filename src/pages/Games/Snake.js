@@ -289,6 +289,7 @@ const Snake = () => {
             {/* SETTINGS */}
             <div className={styles.overlayPanel} style={{display: (settingsOpen ? ("block") : ("none"))}}>
                 <h3>The game settings</h3>
+                <p style={{color: "darkred", fontSize: "16px"}}>Once applied, the game will restart.</p>
                 <div className={styles.overlayContainer}>
                     <label className={styles.overlayLabel}>
                         The Snake color:
