@@ -17,6 +17,7 @@ const Snake = () => {
     const [fieldSize, setFieldSize] = useState(360);
     const [cells, setCells] = useState(20);
     const [isDisplay, setIsDisplay] = useState(true);
+    const [isBoundary, setIsBoundary] = useState(false);
 
     const [selectedOptionSnakeColor, setSelectedOptionSnakeColor] = useState("green");
 
@@ -50,9 +51,15 @@ const Snake = () => {
 
     const [checkedDisplay, setCheckedDisplay] = useState(true);
 
-    const handleCheckboxChange = (event) => {
+    const handleCheckboxChangeDisplay = (event) => {
         setCheckedDisplay(event.target.checked);
-      };
+    };
+
+    const [checkedBoundary, setCheckedBoundary] = useState(false);
+
+    const handleCheckboxChangeBoundary = (event) => {
+        setCheckedBoundary(event.target.checked);
+    };
 
     function applyChanges() {
         setSnakeColor(selectedOptionSnakeColor);
@@ -61,14 +68,13 @@ const Snake = () => {
         setFieldSize(selectedOptionFieldSize);
         setCells(selectedOptionCells);
         setIsDisplay(checkedDisplay);
+        setIsBoundary(checkedBoundary);
 
-
-        handleOnClickRestart();
         setSettingsOpen(false);
+        handleOnClickRestart();
     }
 
     //////////
-
 
     const canvasRef = useRef(null);
     const [snake, setSnake] = useState([{ x: 0, y: Math.floor(cells/2) }]);
@@ -154,6 +160,13 @@ const Snake = () => {
                 return;
             }
 
+            if (isBoundary) {
+                if (head.x < 0) head.x = cells - 1;
+                else if (head.x >= cells) head.x = 0;
+                else if (head.y < 0) head.y = cells - 1;
+                else if (head.y >= cells) head.y = 0;
+            }
+
             if (head.x === food.x && head.y === food.y) {
                 let newFoodPosition = { x: Math.floor(Math.random() * cells), y: Math.floor(Math.random() * cells) };
 
@@ -192,7 +205,7 @@ const Snake = () => {
         const interval = setInterval(gameLoop, 125);
 
         return () => clearInterval(interval);
-    }, [snake, food, direction, pause, score, snakeColor, fieldColor, foodColor, cells, fieldSize]);
+    }, [snake, food, direction, pause, score, snakeColor, fieldColor, foodColor, cells, fieldSize, isBoundary]);
 
     function handleOnClickPaustStart() {
         setPause(!pause);
@@ -201,10 +214,9 @@ const Snake = () => {
     function handleOnClickRestart() {
         setPause(false);
         setScore(0);
-        setSnake([{ x: 0, y: Math.floor(cells/2) }]);
-        const cellsSize = fieldSize/cells;
-        setFood({ x: Math.floor(Math.random() * cellsSize), y: Math.floor(Math.random() * cellsSize)});
         setDirection("right");
+        setSnake([{ x: 0, y: Math.floor(cells/2) }]);
+        setFood({ x: Math.floor(Math.random() * cells), y: Math.floor(Math.random() * cells)});
     }
 
     function handleOnClickSettings() {
@@ -327,9 +339,17 @@ const Snake = () => {
                         <input
                         type="checkbox"
                         checked={checkedDisplay}
-                        onChange={handleCheckboxChange}
+                        onChange={handleCheckboxChangeDisplay}
                         />
-                        Display controller
+                        Display the controller
+                    </label>
+                    <label className={styles.overlayLabel}>
+                        <input
+                        type="checkbox"
+                        checked={checkedBoundary}
+                        onChange={handleCheckboxChangeBoundary}
+                        />
+                        Disable the border
                     </label>
                     <div className={styles.applyButtonContainer}>
                         <button className={styles.applyButton} onClick={applyChanges}>Apply</button>
