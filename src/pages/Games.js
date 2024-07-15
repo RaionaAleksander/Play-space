@@ -5,16 +5,6 @@ import { Link } from "react-router-dom";
 
 import styles from '../resourses/css/Games.module.css';
 
-import redButton from '../resourses/images/Red_button.png';
-import redButton_active from '../resourses/images/Red_button_pressed.png';
-import warrior from '../resourses/images/Warrior.png';
-import warrior_active from '../resourses/images/Warrior_leveled.png';
-import ticTacToe from '../resourses/images/TicTacToe.png';
-import tacTavToe_active from '../resourses/images/TicTacToe_active.png';
-import snake from '../resourses/images/Snake.png';
-import snake_active from '../resourses/images/Snake_active.png';
-
-
 const Games = () => {
     const [isHovered1, setIsHovered1] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
@@ -42,7 +32,7 @@ const Games = () => {
                 onMouseEnter={() => handleMouse(1)} onMouseLeave={() => handleMouse(1)}
             >
                 <div className={styles.imageContainer}>
-                    <img alt="The first game" src={isHovered1 ? redButton_active : redButton} className={styles.imageItem}></img>
+                    <img alt="The first game" src={isHovered1 ? "/images/Red_button_pressed.png" : "/images/Red_button.png"} className={styles.imageItem}></img>
                 </div>
                 <div className={styles.textContainer}>
                     <h2>Button Clicker</h2>
@@ -59,7 +49,7 @@ const Games = () => {
                 onMouseEnter={() => handleMouse(2)} onMouseLeave={() => handleMouse(2)}
             >
                 <div className={styles.imageContainer}>
-                    <img alt="The second game" src={isHovered2 ? warrior_active : warrior} className={styles.imageItem}></img>
+                    <img alt="The second game" src={isHovered2 ? "/images/Warrior_leveled.png" : "/images/Warrior.png"} className={styles.imageItem}></img>
                 </div>
                 <div className={styles.textContainer}>
                     <h2>Hero Clicker</h2>
@@ -77,7 +67,7 @@ const Games = () => {
                 onMouseEnter={() => handleMouse(3)} onMouseLeave={() => handleMouse(3)}
             >
                 <div className={styles.imageContainer}>
-                    <img alt="The third game" src={isHovered3 ? tacTavToe_active : ticTacToe} className={styles.imageItem}></img>
+                    <img alt="The third game" src={isHovered3 ? "/images/TicTacToe_active.png" : "/images/TicTacToe.png"} className={styles.imageItem}></img>
                 </div>
                 <div className={styles.textContainer}>
                     <h2>Tic Tac Toe</h2>
@@ -94,7 +84,7 @@ const Games = () => {
                 onMouseEnter={() => handleMouse(4)} onMouseLeave={() => handleMouse(4)}
             >
                 <div className={styles.imageContainer}>
-                    <img alt="The fourth game" src={isHovered4 ? snake_active : snake} className={styles.imageItem}></img>
+                    <img alt="The fourth game" src={isHovered4 ? "/images/Snake_active.png" : "/images/Snake.png"} className={styles.imageItem}></img>
                 </div>
                 <div className={styles.textContainer}>
                     <h2>Snake</h2>

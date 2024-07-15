@@ -3,8 +3,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import styles from '../../resourses/css/Contact.module.css';
 
-import Wall from '../../resourses/background/Metal_wall.png';
-
 const CopyTextButton = ({ textToCopy, onCopy, buttonId, activeButton }) => {
     const [copySuccess, setCopySuccess] = useState('');
 
@@ -34,7 +32,7 @@ const CopyTextButton = ({ textToCopy, onCopy, buttonId, activeButton }) => {
 
 const Contact = () => {
     useEffect(() => {
-        document.body.style.backgroundImage = `url(${Wall})`;
+        document.body.style.backgroundImage = "url('/background/Metal_wall.png')";
         document.body.style.backgroundRepeat = "repeat";
 
         return () => {

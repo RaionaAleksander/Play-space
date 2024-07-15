@@ -4,8 +4,6 @@ import { useState } from 'react';
 import { Link } from "react-router-dom";
 
 import styles from '../../resourses/css/Navbar.module.css';
-import Gamepad from '../../resourses/images/Gamepad_icon.png';
-import Gamepad_active from '../../resourses/images/Gamepad_icon_active.png';
 
 const Navbar = ({ toggleSidebar }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -51,7 +49,7 @@ const Navbar = ({ toggleSidebar }) => {
                         </button>
                     </div>
                     <div className={styles.imageContainer}>
-                        <img alt="Gamepad icon" src={isHovered ? Gamepad_active : Gamepad} className={styles.imageIcon}></img>
+                        <img alt="Gamepad icon" src={isHovered ? "/images/Gamepad_icon_active.png" : "/images/Gamepad_icon.png"} className={styles.imageIcon}></img>
                     </div>
                 </div>
             </div>

@@ -3,11 +3,6 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import styles from '../../resourses/css/Snake.module.css';
 
-import Start from '../../resourses/images/startButton.png';
-import Stop from '../../resourses/images/stopButton.png';
-import Restart from '../../resourses/images/restartButton.png';
-import Settings from '../../resourses/images/settingsButton.png';
-
 const Snake = () => {
     ////////
     // Settings
@@ -270,18 +265,18 @@ const Snake = () => {
                     style={{backgroundColor: (pause ? ("lightgreen") : ("lightcoral"))}}>
                         {pause ? ("Start") : ("Pause")}
                         {pause ? (
-                            <img width="14px" style={{marginLeft: "6px"}} src={Start} alt="Start"></img>
+                            <img width="14px" style={{marginLeft: "6px"}} src="/images/startButton.png" alt="Start"></img>
                         ) : (
-                            <img width="14px" style={{marginLeft: "6px"}} src={Stop} alt="Stop"></img>
+                            <img width="14px" style={{marginLeft: "6px"}} src="/images/stopButton.png" alt="Stop"></img>
                         )}
                     </button>
                     <button className={styles.snakeButton + ' ' + styles.restart} onClick={handleOnClickRestart} >
                         Restart
-                        <img width="14px" style={{marginLeft: "6px"}} src={Restart} alt="Restart"></img>
+                        <img width="14px" style={{marginLeft: "6px"}} src="/images/restartButton.png" alt="Restart"></img>
                     </button>
                     <button className={styles.snakeButton + ' ' + styles.settings} onClick={handleOnClickSettings}>
                         Settings
-                        <img width="16px" style={{marginLeft: "6px"}} src={Settings} alt="Restart"></img>
+                        <img width="16px" style={{marginLeft: "6px"}} src="/images/settingsButton.png" alt="Restart"></img>
                     </button> 
                 </div>
             </div>

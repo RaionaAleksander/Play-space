@@ -1,21 +1,7 @@
 //HeroClicker.js
 import React, { useState, useEffect, useRef } from 'react';
 
-import Wall from '../../resourses/background/Dungeon_wall2.png';
-
-import Warrior from '../../resourses/images/Warrior.png';
-import WarriorLv from '../../resourses/images/Warrior_leveled.png';
-
 import styles from '../../resourses/css/HeroGame.module.css';
-
-import ButtonG from '../../resourses/images/Gold_button.png';
-import ButtonGLock from '../../resourses/images/Gold_button_locked.png';
-import ButtonE from '../../resourses/images/Exp_button.png';
-import ButtonELock from '../../resourses/images/Exp_button_locked.png';
-
-import Start from '../../resourses/images/startButton.png';
-import Stop from '../../resourses/images/stopButton.png';
-import Restart from '../../resourses/images/restartButton.png';
 
 function formatNumber(number) {
     if (number >= 1.0e+18) {
@@ -37,7 +23,7 @@ function formatNumber(number) {
 
 const HeroClicker = () => {
     useEffect(() => {
-        document.body.style.backgroundImage = `url(${Wall})`;
+        document.body.style.backgroundImage = "url('/background/Dungeon_wall.png')";
         document.body.style.backgroundRepeat = "repeat";
         //document.body.style.backgroundColor = "gold";
 
@@ -188,7 +174,7 @@ const HeroClicker = () => {
             <h1 className={styles.heroName}>Hero Clicker</h1>
             <div className={styles.heroBorder}>
                 <div className={styles.heroCanvas}>
-                    <img src={(isLeveled) ? WarriorLv : Warrior} alt="Hero is warrior" className={styles.heroImage} />
+                    <img src={(isLeveled) ? "/images/Warrior_leveled.png" : "/images/Warrior.png"} alt="Hero is warrior" className={styles.heroImage} />
                     <div className={styles.interfaceField}>
                         <h2>LEVEL: {LEVEL}</h2>
                         <p><b>Level progress: {(win) ? "-" : formatNumber(ExpLevel)} / {(win) ? "-" : formatNumber(MaxExpLevel)}</b></p>
@@ -199,11 +185,11 @@ const HeroClicker = () => {
                         <p><b>Current Gold: {formatNumber(GOLD)} </b></p>
                         <div className={styles.buttonsField}>
                             <div className={styles.upgradeField}>
-                                <img onClick={handleClickG} className={styles.smallButton} src={(GOLD < costOfGold) ? ButtonGLock : ButtonG} alt="Gold button" />
+                                <img onClick={handleClickG} className={styles.smallButton} src={(GOLD < costOfGold) ? "/images/Gold_button_locked.png" : "/images/Gold_button.png"} alt="Gold button" />
                                 <p><b>Upgrade: {formatNumber(costOfGold)}</b></p>
                             </div>
                             <div className={styles.upgradeField}>
-                                <img onClick={handleClickE} className={styles.smallButton} src={(GOLD < costOfExp) ? ButtonELock : ButtonE} alt="Exp button" />
+                                <img onClick={handleClickE} className={styles.smallButton} src={(GOLD < costOfExp) ? "/images/Exp_button_locked.png" : "/images/Exp_button.png"} alt="Exp button" />
                                 <p><b>Upgrade: {formatNumber(costOfExp)}</b></p>
                             </div>
                         </div>
@@ -216,14 +202,14 @@ const HeroClicker = () => {
                     style={{backgroundColor: (pause ? ("lightgreen") : ("lightcoral"))}}>
                     {pause ? ("Start") : ("Pause")}
                     {pause ? (
-                        <img width="14px" style={{marginLeft: "6px"}} src={Start} alt="Start"></img>
+                        <img width="14px" style={{marginLeft: "6px"}} src="/images/startButton.png" alt="Start"></img>
                     ) : (
-                        <img width="14px" style={{marginLeft: "6px"}} src={Stop} alt="Stop"></img>
+                        <img width="14px" style={{marginLeft: "6px"}} src="/images/stopButton.png" alt="Stop"></img>
                     )}
                 </button>
                 <button className={styles.heroButton + ' ' + styles.restart} onClick={handleOnClickRestart}>
                     Restart
-                    <img width="14px" style={{marginLeft: "6px"}} src={Restart} alt="Restart"></img>
+                    <img width="14px" style={{marginLeft: "6px"}} src="/images/restartButton.png" alt="Restart"></img>
                 </button>
             </div>
         </div>

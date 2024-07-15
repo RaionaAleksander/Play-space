@@ -2,14 +2,6 @@
 import React, { useEffect } from 'react';
 import styles from '../resourses/css/Home.module.css';
 import { Link } from "react-router-dom";
- 
-import Gamepad from '../resourses/images/Gamepad_icon.png';
-
-import RedButton from '../resourses/images/Red_button.png';
-import Warrior from '../resourses/images/Warrior_leveled.png';
-import TacTavToe from '../resourses/images/TicTacToe_active.png';
-import Snake from '../resourses/images/Snake_active.png';
-
 
 const Home = () => {
     useEffect(() => {
@@ -25,7 +17,7 @@ const Home = () => {
             <div className={styles.gamepadPosition}>
                 <img 
                     alt="Gamepad-home"
-                    src={Gamepad}
+                    src="/images/Gamepad_icon.png"
                     style={{width: "32%"}}
                 />
                 <h1>"Play Space"</h1>
@@ -45,34 +37,34 @@ const Home = () => {
                 <div className={styles.marquee}>
                     <div className={styles.marqueeone}>
                         <Link to="/games/button_clicker">
-                            <img className={styles.marqueeimage} src={RedButton} alt="red button game" />
+                            <img className={styles.marqueeimage} src="/images/Red_button.png" alt="red button game" />
                         </Link>
                         <Link to="/games/hero_clicker">
-                            <img className={styles.marqueeimage} src={Warrior} alt="warrior game" />
+                            <img className={styles.marqueeimage} src="/images/Warrior_leveled.png" alt="warrior game" />
                         </Link>
                     </div>
                     <div className={styles.marqueetwo}>
                         <Link to="/games/tic-tac-toe">
-                            <img className={styles.marqueeimage} src={TacTavToe} alt="tic tac toe game" />
+                            <img className={styles.marqueeimage} src="/images/TicTacToe_active.png" alt="tic tac toe game" />
                         </Link>
                         <Link to="/games/snake">
-                            <img className={styles.marqueeimage} src={Snake} alt="snake game" />
+                            <img className={styles.marqueeimage} src="/images/Snake_active.png" alt="snake game" />
                         </Link>
                     </div>
                     <div className={styles.marqueethree}>
                         <Link to="/games/button_clicker">
-                            <img className={styles.marqueeimage} src={RedButton} alt="red button game" />
+                            <img className={styles.marqueeimage} src="/images/Red_button.png" alt="red button game" />
                         </Link>
                         <Link to="/games/hero_clicker">
-                            <img className={styles.marqueeimage} src={Warrior} alt="warrior hero" />
+                            <img className={styles.marqueeimage} src="/images/Warrior_leveled.png" alt="warrior hero" />
                         </Link>
                     </div>
                     <div className={styles.marqueefour}>
                         <Link to="/games/tic-tac-toe">
-                            <img className={styles.marqueeimage} src={TacTavToe} alt="tic tac toe game" />
+                            <img className={styles.marqueeimage} src="/images/TicTacToe_active.png" alt="tic tac toe game" />
                         </Link>
                         <Link to="/games/snake">
-                            <img className={styles.marqueeimage} src={Snake} alt="snake game" />
+                            <img className={styles.marqueeimage} src="/images/Snake_active.png" alt="snake game" />
                         </Link>
                     </div>
                 </div>

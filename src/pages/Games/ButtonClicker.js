@@ -1,10 +1,7 @@
 //ButtonClicker.js
 import React, { useState, useEffect } from 'react';
-import RedButton from '../../resourses/images/Red_button.png';
-import RedButtonPr from '../../resourses/images/Red_button_pressed.png';
-import styles from '../../resourses/css/ButtonGame.module.css';
 
-import Restart from '../../resourses/images/restartButton.png';
+import styles from '../../resourses/css/ButtonGame.module.css';
 
 const ButtonClicker = () => {
     useEffect(() => {
@@ -74,14 +71,14 @@ const ButtonClicker = () => {
                         onMouseUp={handleMouseUp}
                         onMouseLeave={handleMouseUp}
                         className={styles.imageButton}
-                        src={isPressed ? RedButtonPr : RedButton}
+                        src={isPressed ? "/images/Red_button_pressed.png" : "/images/Red_button.png"}
                         alt="This is red button"
                 />
             </div>
             {win && <p className="winText"><b>You win!</b></p>}
             <button className={styles.buttonButton + ' ' + styles.restart} onClick={handleOnClickRestart}>
                 Restart
-                <img width="14px" style={{marginLeft: "6px"}} src={Restart} alt="Restart"></img>
+                <img width="14px" style={{marginLeft: "6px"}} src="/images/restartButton.png" alt="Restart"></img>
             </button>
             <h3>{checkSec1()}</h3>
             <h3 className={styles.wowText}>{checkSec2()}</h3>

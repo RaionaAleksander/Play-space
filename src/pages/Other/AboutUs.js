@@ -4,14 +4,9 @@ import { useEffect } from 'react';
 
 import styles from '../../resourses/css/AboutUs.module.css';
 
-import Wall from '../../resourses/background/Room_wall.png';
-
-import Heart from '../../resourses/images/Heart.png';
-import React_icon from '../../resourses/images/React-icon.svg.png';
-
 const AboutUs = () => {
     useEffect(() => {
-        document.body.style.backgroundImage = `url(${Wall})`;
+        document.body.style.backgroundImage = "url('/background/Room_wall.png')";
         document.body.style.backgroundRepeat = "repeat";
 
         return () => {
@@ -42,7 +37,7 @@ const AboutUs = () => {
                         <p>The project repository can be found <a rel="noreferrer" target="_blank" href="https://github.com/RaionaAleksander/Play-space">here</a> on the <b>GitHub</b> platform.</p>
 
                     </div>
-                    <img className={styles.reactImage} src={React_icon} alt="react ison" />
+                    <img className={styles.reactImage} src="/images/React-icon.svg.png" alt="react ison" />
                     <div className={styles.divText}>
                         <p>
                             <b>React</b> <i>{'('}also known as React.js or ReactJS{')'}</i> is a free and open-source front-end JavaScript library for building user interfaces based on components.
@@ -51,7 +46,7 @@ const AboutUs = () => {
                             in the <a rel="noreferrer" target="_blank" href="https://www.w3schools.com/react/">W3schools tutorial</a>.
                         </p>
                     </div>
-                    <img className={styles.heartImage} src={Heart} alt="heart icon" />
+                    <img className={styles.heartImage} src="/images/Heart.png" alt="heart icon" />
                     <div className={styles.divText}>
                         <p>Thank you very much for visiting this project!</p>
                     </div>
