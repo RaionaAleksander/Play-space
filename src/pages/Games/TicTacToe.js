@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-import styles from '../../resourses/css/TicTacToe.module.css';
+import styles from '../../styles/TicTacToe.module.css';
 
 function Square({ value, onSquareClick }) {
   return (

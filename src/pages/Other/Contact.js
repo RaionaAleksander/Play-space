@@ -1,7 +1,7 @@
 // Contact.js
 import React from 'react';
 import { useState, useEffect } from 'react';
-import styles from '../../resourses/css/Contact.module.css';
+import styles from '../../styles/Contact.module.css';
 
 const CopyTextButton = ({ textToCopy, onCopy, buttonId, activeButton }) => {
     const [copySuccess, setCopySuccess] = useState('');

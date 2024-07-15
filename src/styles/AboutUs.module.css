@@ -1,9 +1,9 @@
 .aboutUsPosition {
     margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*flex-direction: column;*/
 }
 
 .informationFiled {
@@ -33,6 +33,10 @@
 }
 
 @media (max-width: 401px) {
+    .aboutUsPosition {
+        margin-bottom: 10px;
+    }
+
     .informationFiled {
         width: 100%;
         border-radius: 0px;

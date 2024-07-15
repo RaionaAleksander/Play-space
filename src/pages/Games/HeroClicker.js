@@ -1,7 +1,7 @@
 //HeroClicker.js
 import React, { useState, useEffect, useRef } from 'react';
 
-import styles from '../../resourses/css/HeroGame.module.css';
+import styles from '../../styles/HeroGame.module.css';
 
 function formatNumber(number) {
     if (number >= 1.0e+18) {

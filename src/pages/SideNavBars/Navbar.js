@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 
-import styles from '../../resourses/css/Navbar.module.css';
+import styles from '../../styles/Navbar.module.css';
 
 const Navbar = ({ toggleSidebar }) => {
     const [isHovered, setIsHovered] = useState(false);

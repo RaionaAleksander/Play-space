@@ -2,7 +2,7 @@ import React from 'react';
 import { useRef, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
-import styles from '../../resourses/css/Sidebar.module.css';
+import styles from '../../styles/Sidebar.module.css';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
     const sidebarRef = useRef(null);

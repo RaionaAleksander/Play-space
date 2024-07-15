@@ -17,7 +17,7 @@ import AboutUs from './pages/Other/AboutUs';
 import SideNavBarsLayout from './pages/SideNavBarsLayout';
 import ScrollToTop from './ScrollToTop';
 
-import './resourses/css/App.css';
+import './styles/App.css';
 
 export default function App() {
     return (

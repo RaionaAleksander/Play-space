@@ -1,7 +1,7 @@
 // Snake.js
 import React, { useState, useEffect, useRef } from 'react';
 
-import styles from '../../resourses/css/Snake.module.css';
+import styles from '../../styles/Snake.module.css';
 
 const Snake = () => {
     ////////

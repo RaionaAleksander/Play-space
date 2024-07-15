@@ -1,7 +1,7 @@
 //ButtonClicker.js
 import React, { useState, useEffect } from 'react';
 
-import styles from '../../resourses/css/ButtonGame.module.css';
+import styles from '../../styles/ButtonGame.module.css';
 
 const ButtonClicker = () => {
     useEffect(() => {

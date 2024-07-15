@@ -2,7 +2,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 
-import styles from '../../resourses/css/AboutUs.module.css';
+import styles from '../../styles/AboutUs.module.css';
 
 const AboutUs = () => {
     useEffect(() => {

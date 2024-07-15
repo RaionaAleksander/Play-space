@@ -1,6 +1,6 @@
 // Home.js
 import React, { useEffect } from 'react';
-import styles from '../resourses/css/Home.module.css';
+import styles from '../styles/Home.module.css';
 import { Link } from "react-router-dom";
 
 const Home = () => {

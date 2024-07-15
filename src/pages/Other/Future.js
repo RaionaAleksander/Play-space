@@ -1,7 +1,7 @@
 // Future.js
 import React, {useState, useEffect, createContext} from 'react';
 import Component2 from '../Future_conponents/Component2'; 
-import styles from '../../resourses/css/Future.module.css';
+import styles from '../../styles/Future.module.css';
 
 export const UserContext = createContext();
 

@@ -1,7 +1,7 @@
 // Blogs.js
 import React, { useState, useCallback } from 'react';
 import Todos from './Blogs_components/Todos.js';
-import styles from '../resourses/css/Blogs.module.css';
+import styles from '../styles/Blogs.module.css';
 
 const Blogs = () => {
     const [textarea, setTextarea] = useState(

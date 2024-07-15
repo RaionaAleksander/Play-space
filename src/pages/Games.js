@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 
-import styles from '../resourses/css/Games.module.css';
+import styles from '../styles/Games.module.css';
 
 const Games = () => {
     const [isHovered1, setIsHovered1] = useState(false);
