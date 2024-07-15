@@ -1,6 +1,6 @@
 // Blogs.js
 import React, { useState, useCallback } from 'react';
-import Todos from './Blogs_components/Todos.js';
+import Todos from '../components/Blogs_components/Todos';
 import styles from '../styles/Blogs.module.css';
 
 const Blogs = () => {

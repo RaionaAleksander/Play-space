@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { UserContext } from '../Other/Future';
+import { UserContext } from '../../pages/Other/Future';
 
 const Finalcomponent = () => {
     const count_seconds = useContext(UserContext);

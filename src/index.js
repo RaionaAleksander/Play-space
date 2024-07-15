@@ -13,9 +13,8 @@ import TicTacToe from './pages/Games/TicTacToe';
 import Snake from './pages/Games/Snake';
 import AboutUs from './pages/Other/AboutUs';
 
-//import Navbarmenu from './pages/Navbarmenu';
-import SideNavBarsLayout from './pages/SideNavBarsLayout';
-import ScrollToTop from './ScrollToTop';
+import SideNavBarsLayout from './components/SideNavBarsLayout';
+import ScrollToTop from './components/ScrollToTop';
 
 import './styles/App.css';
 
@@ -24,7 +23,6 @@ export default function App() {
         <BrowserRouter>
             <ScrollToTop />
             <Routes>
-                {/*<Route path="/" element={<Navbarmenu />}>*/}
                 <Route path="/" element={<SideNavBarsLayout />}>
                     <Route index element={<Home />} />
                     <Route path="blogs" element={<Blogs />} />
@@ -38,7 +36,6 @@ export default function App() {
                     <Route path="about_us" element={<AboutUs />} />
                     <Route path="*" element={<NoPage />} />
                 </Route>
-                {/*</Route>*/}
             </Routes>
         </BrowserRouter>
     );
@@ -46,5 +43,4 @@ export default function App() {
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
-//const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<App />);
